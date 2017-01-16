@@ -1,0 +1,27 @@
+{
+	"name": "PS! Challenger-Bot",
+	"version": "0.0.1",
+	"dependencies": {
+		"sugar": "1.4.1",
+		"websocket": "1.0.8",
+		"colors": "0.6.2",
+		"csv-parse":"0.0.6",
+		"es6-shim": "0.33.6",
+		"origindb": "^2.4.1"
+	},
+	"engines": {
+		"node": "> 4.0.0"
+	},
+	"engineStrict": true,
+	"scripts": {"start": "node main.js"},
+	"bin": "./main.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/DurzaOffTopic/Challenger-Bot"
+	},
+	"author": {
+		"name": "Carson Atlas",
+		"email": "carsonatlas@gmail.com"
+	},
+	"private": true
+}
