@@ -262,7 +262,7 @@ exports.commands = {
     },
     
     // Storage commands
-	bits: 'points',
+	'Challenge Points': 'points',
 	points: function (target, room, user) {
 		if (room !== user) return;
 		let targetUserid = target ? Tools.toId(target) : user.id;
