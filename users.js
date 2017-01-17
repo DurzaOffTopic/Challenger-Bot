@@ -1,5 +1,5 @@
 'use strict';
-let developers = ["DurzaOffTopic" , "DDDon"];
+let developers = ["DurzaOffTopic"];
 let Users = {};
 let users = Users.users = new Map();
 
