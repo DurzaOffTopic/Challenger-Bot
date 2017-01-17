@@ -56,11 +56,11 @@ class StorageManager {
 		if (database.leaderboard[user.id].name !== user.name) database.leaderboard[user.id].name = user.name;
 	}
 
-	removePoints(points, user, roomid) {
+	delPoints(points, user, roomid) {
 		this.addPoints(-points, user, roomid);
 	}
 
-	getPoints(user, roomid) {
+	checkPoints(user, roomid) {
 		if (!(roomid in this.databases)) this.databases[roomid] = {};
 		let database = this.databases[roomid];
 		if (!('leaderboard' in database)) database.leaderboard = {};
