@@ -260,5 +260,19 @@ exports.commands = {
             user.sendTo("Settings for " + targetRoom.name + ": " + link);
         }.bind(this))
     },
+    
+    // Storage commands
+	bits: 'points',
+	points: function (target, room, user) {
+		if (room !== user) return;
+		let targetUserid = target ? Tools.toId(target) : user.id;
+		let points = [];
+		user.rooms.forEach((rank, room) => {
+			if (!(room.id in Storage.databases) || !('leaderboard' in Storage.databases[room.id])) return;
+			if (targetUserid in Storage.databases[room.id].leaderboard) points.push("**" + room.id + "**: " + Storage.databases[room.id].leaderboard[targetUserid].points);
+		});
+		if (!points.length) return this.say((target ? target.trim() + " does not" : "You do not") + " have points on the Challenge Leaderboard.");
+		this.say(points.join(" | "));
+    },
 
 };
